@@ -1,0 +1,15 @@
+MANIFEST.bak
+MYMETA.*
+MYMETA.yml
+Makefile
+Makefile.old
+Reference.bs
+Reference.c
+Reference.o
+Reference.i
+Reference.s
+blib/
+pm_to_blib
+*.tar.gz
+/Quote-Reference-*/
+untracked/
