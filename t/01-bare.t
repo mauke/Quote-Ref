@@ -4,7 +4,7 @@ use strict;
 
 use Test::More tests => 6;
 
-use Quote::Reference;
+use Quote::Ref;
 
 is_deeply qa(), [];
 is_deeply qh(), {};

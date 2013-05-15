@@ -1,12 +1,12 @@
 \.tar\.gz$
 ^Build$
-^Quote-Reference-
+^Quote-Ref-
 ^GNUmakefile$
 ^MANIFEST\.(?!SKIP$)
 ^MYMETA\.
 ^Makefile$
 ^Makefile\.old$
-^Reference\.(?:[iocs]|bs)$
+^Ref\.(?:[iocs]|bs)$
 ^\.
 ^_build
 ^blib

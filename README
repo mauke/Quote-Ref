@@ -1,4 +1,4 @@
-Quote-Reference
+Quote-Ref
 
 qw for references
 
@@ -17,21 +17,21 @@ SUPPORT AND DOCUMENTATION
 After installing, you can find documentation for this module with the
 perldoc command.
 
-    perldoc Quote::Reference
+    perldoc Quote::Ref
 
 You can also look for information at:
 
     RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Quote-Reference
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Quote-Ref
 
     AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/Quote-Reference
+        http://annocpan.org/dist/Quote-Ref
 
     CPAN Ratings
-        http://cpanratings.perl.org/d/Quote-Reference
+        http://cpanratings.perl.org/d/Quote-Ref
 
     Search CPAN
-        http://search.cpan.org/dist/Quote-Reference/
+        http://search.cpan.org/dist/Quote-Ref/
 
 
 COPYRIGHT AND LICENCE

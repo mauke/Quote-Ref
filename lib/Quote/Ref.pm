@@ -1,4 +1,4 @@
-package Quote::Reference;
+package Quote::Ref;
 
 use v5.12.0;
 
@@ -48,11 +48,11 @@ __END__
 
 =head1 NAME
 
-Quote::Reference - qw for references
+Quote::Ref - qw for references
 
 =head1 SYNOPSIS
 
- use Quote::Reference;
+ use Quote::Ref;
 
  my $aref = qa(foo bar baz);  # $aref = [ qw(foo bar baz) ]
  my $href = qh(foo 1 bar 2);  # $href = { qw(foo 1 bar 2) }

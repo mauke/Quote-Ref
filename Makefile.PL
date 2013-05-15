@@ -4,10 +4,10 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME                => 'Quote::Reference',
+    NAME                => 'Quote::Ref',
     AUTHOR              => q{Lukas Mai <l.mai@web.de>},
-    VERSION_FROM        => 'lib/Quote/Reference.pm',
-    ABSTRACT_FROM       => 'lib/Quote/Reference.pm',
+    VERSION_FROM        => 'lib/Quote/Ref.pm',
+    ABSTRACT_FROM       => 'lib/Quote/Ref.pm',
     CONFIGURE_REQUIRES => {
         'ExtUtils::MakeMaker' => '6.56',
     },
@@ -26,12 +26,12 @@ WriteMakefile(
     META_MERGE => {
         resources => {
             repository => {
-                url => 'git://github.com/mauke/Quote-Reference.git',
-                web => 'https://github.com/mauke/Quote-Reference',
+                url => 'git://github.com/mauke/Quote-Ref.git',
+                web => 'https://github.com/mauke/Quote-Ref',
                 type => 'git',
             },
         },
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean               => { FILES => 'Quote-Reference-*' },
+    clean               => { FILES => 'Quote-Ref-*' },
 );

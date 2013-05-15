@@ -86,7 +86,7 @@ static OP *my_append_elem(pTHX_ I32 type, OP *first, OP *last) {
 #define op_append_elem(type, first, last) my_append_elem(aTHX_ type, first, last)
 #endif
 
-#define MY_PKG "Quote::Reference"
+#define MY_PKG "Quote::Ref"
 
 #define HINTK_QA     MY_PKG "/qa"
 #define HINTK_QH     MY_PKG "/qh"
@@ -287,7 +287,7 @@ static int my_keyword_plugin(pTHX_ char *keyword_ptr, STRLEN keyword_len, OP **o
 
 WARNINGS_RESET
 
-MODULE = Quote::Reference   PACKAGE = Quote::Reference
+MODULE = Quote::Ref   PACKAGE = Quote::Ref
 PROTOTYPES: ENABLE
 
 BOOT:
