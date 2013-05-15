@@ -48,7 +48,7 @@ __END__
 
 =head1 NAME
 
-Quote::Ref - qw for references
+Quote::Ref - qw for array/hash references
 
 =head1 SYNOPSIS
 
