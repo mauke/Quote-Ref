@@ -6,11 +6,11 @@ use Test::More tests => 6;
 
 use Quote::Ref;
 
-is_deeply qa∘foo bar baz∘, [qw∘foo bar baz∘];
-is_deeply qh∘foo bar baz "∘, {qw∘foo bar baz "∘};
+is_deeply qwa∘foo bar baz∘, [qw∘foo bar baz∘];
+is_deeply qwh∘foo bar baz "∘, {qw∘foo bar baz "∘};
 
-is_deeply qa∘foo ∞ ♥ bar∘, [qw∘foo ∞ ♥ bar∘];
-is_deeply qh∘foo ∞ ♥ bar∘, {qw∘foo ∞ ♥ bar∘};
+is_deeply qwa∘foo ∞ ♥ bar∘, [qw∘foo ∞ ♥ bar∘];
+is_deeply qwh∘foo ∞ ♥ bar∘, {qw∘foo ∞ ♥ bar∘};
 
-is_deeply qa∘\\\∘ \\ \∘ \\∘, [qw∘\\\∘ \\ \∘ \\∘];
-is_deeply qh∘\\\∘ \\ \∘ \\∘, {qw∘\\\∘ \\ \∘ \\∘};
+is_deeply qwa∘\\\∘ \\ \∘ \\∘, [qw∘\\\∘ \\ \∘ \\∘];
+is_deeply qwh∘\\\∘ \\ \∘ \\∘, {qw∘\\\∘ \\ \∘ \\∘};

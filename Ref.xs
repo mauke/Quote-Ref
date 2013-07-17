@@ -88,8 +88,8 @@ static OP *my_append_elem(pTHX_ I32 type, OP *first, OP *last) {
 
 #define MY_PKG "Quote::Ref"
 
-#define HINTK_QA     MY_PKG "/qa"
-#define HINTK_QH     MY_PKG "/qh"
+#define HINTK_QWA     MY_PKG "/qwa"
+#define HINTK_QWH     MY_PKG "/qwh"
 
 enum QxType {
 	QX_ARRAY,
@@ -222,7 +222,7 @@ static void parse_qx(pTHX_ OP **op_ptr, const enum QxType t) {
 		lex_read_space(0);
 		c = lex_peek_unichar(0);
 		if (c == -1) {
-			croak("Unexpected EOF after q%c", t == QX_ARRAY ? 'a' : 'h');
+			croak("Unexpected EOF after qw%c", t == QX_ARRAY ? 'a' : 'h');
 		}
 	}
 	lex_read_unichar(0);
@@ -265,11 +265,12 @@ static int my_keyword_plugin(pTHX_ char *keyword_ptr, STRLEN keyword_len, OP **o
 	enum QxType t;
 
 	if (
-		keyword_len == 2 &&
+		keyword_len == 3 &&
 		keyword_ptr[0] == 'q' &&
+		keyword_ptr[1] == 'w' &&
 		(
-			keyword_ptr[1] == 'a' ? t = QX_ARRAY, qx_enableds(HINTK_QA) :
-			keyword_ptr[1] == 'h' ? t = QX_HASH , qx_enableds(HINTK_QH) :
+			keyword_ptr[2] == 'a' ? t = QX_ARRAY, qx_enableds(HINTK_QWA) :
+			keyword_ptr[2] == 'h' ? t = QX_HASH , qx_enableds(HINTK_QWH) :
 			0
 		)
 	) {
@@ -294,8 +295,8 @@ BOOT:
 WARNINGS_ENABLE {
 	HV *const stash = gv_stashpvs(MY_PKG, GV_ADD);
 	/**/
-	newCONSTSUB(stash, "HINTK_QA", newSVpvs(HINTK_QA));
-	newCONSTSUB(stash, "HINTK_QH", newSVpvs(HINTK_QH));
+	newCONSTSUB(stash, "HINTK_QWA", newSVpvs(HINTK_QWA));
+	newCONSTSUB(stash, "HINTK_QWH", newSVpvs(HINTK_QWH));
 	/**/
 	next_keyword_plugin = PL_keyword_plugin;
 	PL_keyword_plugin = my_keyword_plugin;

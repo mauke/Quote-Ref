@@ -13,8 +13,8 @@ BEGIN {
 }
 
 my %export = (
-	qa => HINTK_QA,
-	qh => HINTK_QH,
+	qwa => HINTK_QWA,
+	qwh => HINTK_QWH,
 );
 
 sub import {
@@ -54,26 +54,26 @@ Quote::Ref - qw for array/hash references
 
  use Quote::Ref;
 
- my $aref = qa(foo bar baz);  # $aref = [ qw(foo bar baz) ]
- my $href = qh(foo 1 bar 2);  # $href = { qw(foo 1 bar 2) }
+ my $aref = qwa(foo bar baz);  # $aref = [ qw(foo bar baz) ]
+ my $href = qwh(foo 1 bar 2);  # $href = { qw(foo 1 bar 2) }
 
 =head1 DESCRIPTION
 
-This module provides the new keywords C<qa> and C<qh>.
+This module provides the new keywords C<qwa> and C<qwh>.
 
-=head2 qa
+=head2 qwa
 
-C<qa> is a quoting operator like L<q or qq|perlop/Quote-and-Quote-like-Operators>.
+C<qwa> is a quoting operator like L<q or qq|perlop/Quote-and-Quote-like-Operators>.
 It works like C<qw> in that it parses its contents as a list of whitespace
 separated words, but instead of turning them into a list, it turns them into an
-array reference. That is, C<qa!...!> works like C<[ qw!...! ]>.
+array reference. That is, C<qwa!...!> works like C<[ qw!...! ]>.
 
-=head2 qh
+=head2 qwh
 
-C<qh> is a quoting operator like L<q or qq|perlop/Quote-and-Quote-like-Operators>.
+C<qwh> is a quoting operator like L<q or qq|perlop/Quote-and-Quote-like-Operators>.
 It works like C<qw> in that it parses its contents as a list of whitespace
 separated words, but instead of turning them into a list, it turns them into an
-hash reference. That is, C<qh!...!> works like C<{ qw!...! }>.
+hash reference. That is, C<qwh!...!> works like C<{ qw!...! }>.
 
 =head1 AUTHOR
 
