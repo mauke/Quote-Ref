@@ -51,7 +51,7 @@ my %opt = (
 	},
 );
 
-(my $mm_version = ExtUtils::MakeMaker->VERSION) =~ tr/_//d;
+(my $mm_version = ExtUtils::MakeMaker->VERSION($opt{CONFIGURE_REQUIRES}{'ExtUtils::MakeMaker'})) =~ tr/_//d;
 
 if ($mm_version < 6.67_04) {
 	# Why? For the glory of satan, of course!
